@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos de la estructura */
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-right: 20px;
+  }
+  
+  .navigation a {
+    color: inherit;
+  }
+  
+  .navigation a:hover {
+    color: #666;
+  }
+  
+  /* Estilos del contenido principal */
+  
+  .main {
+    padding: 40px 0;
+  }
+  
+  .classes {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+  }
+  
+  .titulo-clases {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Estilos para la sección "Clases" */
+  
+  .classes-list {
+    text-align: center;
+  }
+  
+  .classes-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .classes-list li a {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  /* Media queries */
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navigation {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .navigation li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      }
+    
+      .hero h1 {
+        font-size: 28px;
+      }
+    
+      .classes-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+.ingeniero{
+    max-width: 150px;
+    max-height: 150px;
+}
+  
