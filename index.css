@@ -83,7 +83,15 @@ body {
   .footer {
     background-color: #f1f1f1;
     padding: 20px 0;
-    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .steam{
+    padding-left: 40px;
   }
   
   /* Estilos para la sección "Clases" */
@@ -111,6 +119,10 @@ body {
       flex-direction: column;
       align-items: center;
     }
+
+    .footer{
+        flex-direction: column;
+    }
   
     .navigation {
       flex-direction: column;
@@ -120,10 +132,6 @@ body {
     .navigation li {
       margin-right: 0;
       margin-bottom: 10px;
-      }
-    
-      .hero h1 {
-        font-size: 28px;
       }
     
       .classes-list {
