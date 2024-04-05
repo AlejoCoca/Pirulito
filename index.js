@@ -1,4 +1,5 @@
-const elemento = document.getElementById("arcoiris");
+const titulo = document.getElementById("arcoiris");
+const bot1 = document.getElementById("boton");
 //elemento.style.width = "100px";
 //elemento.style.height = "100px";
 
@@ -27,7 +28,8 @@ setInterval(() => {
         }
     }
     let color = generarColor(RGB[0],RGB[1],RGB[2])
-    elemento.style.color = color;
+    titulo.style.color = color;
+    bot1.style.backgroundColor = color;
     if (indiceColor == 3) {
         indiceColor = 0;
     }

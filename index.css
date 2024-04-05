@@ -144,4 +144,26 @@ body {
     max-width: 150px;
     max-height: 150px;
 }
-  
+
+.tinisius{
+  max-width: 150px;
+  max-height: 142px;
+}
+
+img {
+  align-self: center;
+}
+
+#boton {
+  border: none;
+  color: #333;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  max-height: 50px;
+  align-self: center;
+}
