@@ -1,42 +1,36 @@
 const contenedor = document.getElementById("contenedor");
 const imagen = document.getElementById("imagen");
 const boton = document.getElementById("boton");
+const imagenes = [];
+const posiciones = [];
 
 let animacionActiva = false; // Flag to control animation state
 
 // Función para animar el rebote
 function animarRebote() {
-  imagen.style.position = "absolute";
-  imagen.style.top = "0";
-  imagen.style.left = "0";
-  // Posición inicial
-  let x = 0;
-  let y = 0;
-
-  let velocidadX = 1;
-  let velocidadY = 1;
-
   // Intervalo para la animación
   const intervalo = setInterval(() => {
+    imagenes.forEach((imagen, index) => {
     // Actualizar la posición
-    x += 5*velocidadX;
-    y += 5*velocidadY;
+    posiciones[index].x += 5*posiciones[index].velocidadX;
+    posiciones[index].y += 5*posiciones[index].velocidadY;
 
     // Aplicar la nueva posición
-    imagen.style.top = `${y}px`;
-    imagen.style.left = `${x}px`;
+    imagen.style.top = `${posiciones[index].x}px`;
+    imagen.style.left = `${posiciones[index].y}px`;
 
     // Rebote en el suelo
-    if (y >= contenedor.clientHeight || y < 0) {
+    if (posiciones[index].x >= contenedor.clientHeight || posiciones[index].x < 0) {
       // Invertir la velocidad vertical
-      velocidadY *= -1;
+      posiciones[index].velocidadX *= -1;
     }
 
     // Rebote en las paredes
-    if (x >= contenedor.clientWidth || x < 0) {
+    if (posiciones[index].y >= contenedor.clientWidth || posiciones[index].y < 0) {
       // Invertir la velocidad horizontal
-      velocidadX *= -1;
+      posiciones[index].velocidadY *= -1;
     }
+  })
   }, 20); // Ajustar la velocidad de la animación
 
   // Detener la animación después de un tiempo
@@ -51,5 +45,17 @@ boton.addEventListener("click", () => {
   if (!animacionActiva) {
     animarRebote();
     animacionActiva = true; // Set flag to indicate animation is running
+  }else{
+    const newImagen = document.createElement("img");
+    newImagen.src = "public/TINISIUS.webp";
+    newImagen.style.height = "150px";
+    newImagen.style.width = "150px";
+    newImagen.style.position = "absolute";
+    newImagen.style.top = "0";
+    newImagen.style.left = "0";
+    posiciones.push({x: 0, y: Math.random()*contenedor.clientWidth, velocidadX: 1, velocidadY: 1});
+    console.log(newImagen);
+    document.body.append(newImagen);
+    imagenes.push(newImagen);
   }
 });
